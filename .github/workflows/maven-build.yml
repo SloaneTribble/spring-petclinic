@@ -6,7 +6,7 @@ name: Java CI with Maven
 on:
   workflow_dispatch:
   push:
-    branches: [ main ]
+    branches: [ main, nexus-upload ]
   pull_request:
     branches: [ main ]
 
@@ -28,3 +28,16 @@ jobs:
           cache: maven
       - name: Build with Maven Wrapper
         run: ./mvnw -B package
+
+                    
+      - name: Nexus Repository Publisher for GitHub Actions
+        uses: sonatype-nexus-community/nexus-repo-github-action@1.0.0
+        with:
+          serverUrl: http://192.168.156.155:8081/
+          username: admin
+          password: ${{ secrets.PASSWORD }}
+          format: maven2
+          repository: maven-releases
+          coordinates: groupId=com.example artifactId=app version=1.0.0
+          assets: extension=jar
+          filename: ~/actions-runner/_work/spring-petclinic/spring-petclinic/target
