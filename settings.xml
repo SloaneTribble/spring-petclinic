@@ -8,9 +8,9 @@
       <password>${env.GITHUB_TOKEN}</password>
     </server>
     <server>
-    <id>snapshot-repo</id>
+    <id>my-repo</id>
     <username>admin</username>
-    <password>${env.NEXUS}</password>
+    <password>${env.PASSWORD}</password>
 </server>
   </servers>
 </settings>
