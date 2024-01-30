@@ -37,6 +37,14 @@
 
   </properties>
 
+  <distributionManagement>
+    <repository>
+      <id>my-repo</id>
+      <name>maven-snapshots</name>
+      <url>http://192.168.156.155:8081/repository/maven-snapshots/</url>
+    </repository>
+  </distributionManagement>
+
   <dependencies>
     <!-- Spring and Spring Boot dependencies -->
     <dependency>
