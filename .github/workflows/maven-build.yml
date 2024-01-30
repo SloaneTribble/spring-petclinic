@@ -26,10 +26,11 @@ jobs:
           java-version: ${{matrix.java}}
           distribution: 'adopt'
           cache: maven
+          architecture: 'aarch64'
       - name: Build with Maven Wrapper
         run: |
             cat settings.xml
             cat settings.xml > ~/.m2/settings.xml
-            ./mvnw deploy -e -X
+            ./mvnw deploy 
 
                 
