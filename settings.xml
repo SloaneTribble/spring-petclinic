@@ -8,7 +8,7 @@
       <password>${env.GITHUB_TOKEN}</password>
     </server>
     <server>
-    <id>my-repo</id>
+    <id>snapshot-repo</id>
     <username>admin</username>
     <password>${env.PASSWORD}</password>
 </server>

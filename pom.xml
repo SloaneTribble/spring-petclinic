@@ -14,6 +14,15 @@
   </parent>
   <name>petclinic</name>
 
+
+  <distributionManagement>
+    <snapshotRepository>
+      <id>snapshot-repo</id>
+      <name>maven-snapshots</name>
+      <url>http://192.168.156.155:8081/repository/maven-snapshots/</url>
+    </snapshotRepository>
+  </distributionManagement>
+
   <properties>
 
     <!-- Generic properties -->
@@ -37,13 +46,6 @@
 
   </properties>
 
-  <distributionManagement>
-    <snapshotRepository>
-      <id>my-repo</id>
-      <name>maven-snapshots</name>
-      <url>http://192.168.156.155:8081/repository/maven-snapshots/</url>
-    </snapshotRepository>
-  </distributionManagement>
 
   <dependencies>
     <!-- Spring and Spring Boot dependencies -->
