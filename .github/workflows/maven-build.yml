@@ -32,5 +32,7 @@ jobs:
             cat settings.xml
             cat settings.xml > ~/.m2/settings.xml
             ./mvnw deploy 
+        env:
+          PASSWORD: ${{ secrets.PASSWORD }}
 
                 
