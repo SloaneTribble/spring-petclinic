@@ -18,7 +18,7 @@
     <repository>
       <id>spring-petclinic-repo</id>
       <name>maven-releases</name>
-      <url>http://${env.NGROK_ENDPOINT}/repository/maven-releases/</url>
+      <url>${env.NGROK_ENDPOINT}/repository/maven-releases/</url>
     </repository>
       <snapshotRepository>
       <id>spring-petclinic-snapshots</id>
