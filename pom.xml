@@ -23,7 +23,7 @@
       <snapshotRepository>
       <id>spring-petclinic-snapshots</id>
       <name>maven-snapshots</name>
-      <url>http://${env.NGROK_ENDPOINT}/repository/maven-snapshots/</url>
+      <url>${env.NGROK_ENDPOINT}/repository/maven-snapshots/</url>
     </snapshotRepository>
   </distributionManagement>
 
@@ -279,7 +279,7 @@
 
     <repository>
         <id>joda-time-repo</id>
-        <url>http://${env.NGROK_ENDPOINT}/repository/maven-releases/</url>
+        <url>${env.NGROK_ENDPOINT}/repository/maven-releases/</url>
     </repository>
     <repository>
       <id>spring-snapshots</id>
