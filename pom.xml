@@ -279,7 +279,7 @@
 
     <repository>
         <id>joda-time-repo</id>
-        <url>http://localhost:8081/repository/maven-releases/</url>
+        <url>http://${env.NGROK_ENDPOINT}/repository/maven-releases/</url>
     </repository>
     <repository>
       <id>spring-snapshots</id>
