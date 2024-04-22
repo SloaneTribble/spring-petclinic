@@ -17,5 +17,5 @@ jobs:
               run: mvn deploy --settings settings.xml
               env:
                 NEXUS_USERNAME: ${{ secrets.NEXUS_USERNAME }}
-                NEXUS_PASSWORD: ${{ secrets.NEXUS_PASS }}
+                NEXUS_PASSWORD: ${{ secrets.NEXUS_PASSWORD }}
                 NGROK_ENDPOINT: ${{ secrets.NGROK_ENDPOINT }}
