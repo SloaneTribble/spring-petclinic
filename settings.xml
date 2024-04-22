@@ -1,16 +1,28 @@
 <settings xmlns="http://maven.apache.org/SETTINGS/1.0.0"
-  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xsi:schemaLocation="http://maven.apache.org/SETTINGS/1.0.0 https://maven.apache.org/xsd/settings-1.0.0.xsd">
-  <servers>
-    <server>
-      <id>github</id>
-      <username>${env.GITHUB_ACTOR}</username>
-      <password>${env.GITHUB_TOKEN}</password>
-    </server>
-    <server>
-    <id>snapshot-repo</id>
-    <username>admin</username>
-    <password>${env.PASSWORD}</password>
-</server>
-  </servers>
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:schemaLocation="http://maven.apache.org/SETTINGS/1.0.0
+                              http://maven.apache.org/xsd/settings-1.0.0.xsd">
+
+    <servers>
+        <server>
+            <id>spring-petclinic-repo</id>
+            <username>${env.NEXUS_USERNAME}</username>
+            <password>${env.NEXUS_PASSWORD}</password>
+        </server>
+        <server>
+            <id>spring-petclinic-snapshots</id>
+            <username>${env.NEXUS_USERNAME}</username>
+        <password>${env.NEXUS_PASSWORD}</password>
+        </server>
+        <server>
+            <id>joda-time-repo</id>
+            <username>${env.NEXUS_USERNAME}</username>
+            <password>${env.NEXUS_PASSWORD}</password>
+        </server>
+        <server>
+            <id>joda-time-snapshots</id>
+            <username>${env.NEXUS_USERNAME}</username>
+        <password>${env.NEXUS_PASSWORD}</password>
+        </server>
+    </servers>
 </settings>
